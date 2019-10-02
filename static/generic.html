@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<!--
+	Binary by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Predict by CNN</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo"><strong>CNN</strong> vgg model</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Roll Call</a></li>
+					<li><a href="generic.html">View Attendance</a></li>
+					<li><a href="elements.html">Other</a></li>
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+					<header>
+						<h1>Select your option</h1>
+					</header>
+					<button id="view_everyday">View attendance table</button>
+					<!--Table-->
+					<table id="viewtable">
+					</table>
+						 
+				</div>
+			</section>
+
+
+			<script>
+				document.getElementById("view_everyday").onclick = function(){
+							let message = {'date':'0'};
+							console.log(message);
+
+							$.post("http://localhost:5000/index",JSON.stringify(message),function(response){
+
+								alert(response);
+								var num = 35;/*change amount of people here*/
+								num = num+1;
+								var i;
+								var j;
+								var str = "";
+								document.getElementById("viewtable").style.visibility = "visible";
+
+								str+="<tr><td>name</td>";
+								var count = 0;
+								for(i=0;i<response.length;i+=num)
+								{
+									str+="<td>";
+									str+=response[i][0];
+									str+="</td>";
+									count++;
+								}
+								str+="</tr>";
+								
+								for(i=1;i<num;i++)
+								{
+									str+="<tr><td>";
+									str+=response[i][0];
+									str+="</td>";
+									for(j=i;j<=i+(num*(count-1));j+=num)
+									{
+										str+="<td>";
+										str+=response[j][2].toString();
+										str+="</td>";
+									}
+									str+="</tr>";
+								}
+								document.getElementById("viewtable").innerHTML += str;
+								str = "";
+							});
+						};
+			</script>
+		
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

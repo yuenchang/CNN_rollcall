@@ -1,0 +1,1033 @@
+<!DOCTYPE HTML>
+<!--
+	Binary by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Predict by CNN</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo"><strong>CNN</strong> vgg model</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Roll Call</a></li>
+					<li><a href="generic.html">View Attendance</a></li>
+					<li><a href="elements.html">Other</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>NCKU CSIE<br />
+					Roll Calling System</a></h1>
+					<ul class="actions">
+						<li><a href="#one" class="button alt scrolly big">Start Roll Calling</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<article id="one" class="post style1">
+					<!-- Camera -->
+					<!--main id="camera"-->
+						<p id="whos_here_title">Who's here:   <span id="result"></span></p>
+						<!-- Camera sensor -->
+						<canvas id="camera--sensor"width="400" height="300"></canvas>
+						<!-- Camera view -->
+						<video id="camera--view" autoplay playsinline></video>
+						<!-- Camera output -->
+						<img src="//:0" alt="" id="camera--output">
+						<!-- Camera trigger -->
+						<button id="camera--trigger">Take a picture</button>
+						<div class="image"></div>
+							<img id="background" src="images/background.jpg">
+						</div>
+						
+						<!-- the scroll bar-->
+						<div id="scroll_bar"><br />
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								王郁琪
+							</p>
+								<button id="a_O">O</button>
+								<button id="a_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								邱百纓
+							</p>
+								<button id="b_O">O</button>
+								<button id="b_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								簡丞珮
+							</p>
+								<button id="c_O">O</button>
+								<button id="c_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								張語恩
+							</p>
+								<button id="d_O">O</button>
+								<button id="d_X">X</button>		
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								何奕萱
+							</p>
+								<button id="e_O">O</button>
+								<button id="e_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								倪國勛
+							</p>
+								<button id="f_O">O</button>
+								<button id="f_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								吳偵平
+							</p>
+								<button id="g_O">O</button>
+								<button id="g_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								林亭伃
+							</p>
+								<button id="h_O">O</button>
+								<button id="h_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								梁致綜
+							</p>
+								<button id="i_O">O</button>
+								<button id="i_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								賴柏瑜
+							</p>
+								<button id="j_O">O</button>
+								<button id="j_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								林辰臻
+							</p>
+								<button id="k_O">O</button>
+								<button id="k_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								黃威翔
+							</p>
+								<button id="l_O">O</button>
+								<button id="l_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								蔡柏垣
+							</p>
+								<button id="m_O">O</button>
+								<button id="m_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								潘荏羽
+							</p>
+								<button id="n_O">O</button>
+								<button id="n_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								曾韻如
+							</p>
+								<button id="o_O">O</button>
+								<button id="o_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								柳孟芸
+							</p>
+								<button id="p_O">O</button>
+								<button id="p_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								陳軒翊
+							</p>
+								<button id="q_O">O</button>
+								<button id="q_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								張祐禎
+							</p>
+								<button id="r_O">O</button>
+								<button id="r_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								王聖中
+							</p>
+								<button id="s_O">O</button>
+								<button id="s_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								林家緯
+							</p>
+								<button id="t_O">O</button>
+								<button id="t_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								王宏偉
+							</p>
+								<button id="u_O">O</button>
+								<button id="u_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								洪培軒
+							</p>
+								<button id="v_O">O</button>
+								<button id="v_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								宋金操
+							</p>
+								<button id="w_O">O</button>
+								<button id="w_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								郭彥松
+							</p>
+								<button id="x_O">O</button>
+								<button id="x_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								黃俊豪
+							</p>
+								<button id="y_O">O</button>
+								<button id="y_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								林郁松
+							</p>
+								<button id="z_O">O</button>
+								<button id="z_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								張財實
+							</p>
+								<button id="aa_O">O</button>
+								<button id="aa_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								陳彥達
+							</p>
+								<button id="ab_O">O</button>
+								<button id="ab_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								林禹辰
+							</p>
+								<button id="ac_O">O</button>
+								<button id="ac_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								黃瑞連
+							</p>
+								<button id="ad_O">O</button>
+								<button id="ad_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								吳郁晨
+							</p>
+								<button id="ae_O">O</button>
+								<button id="ae_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								陳香君
+							</p>
+								<button id="af_O">O</button>
+								<button id="af_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								陳昱霖
+							</p>
+								<button id="ag_O">O</button>
+								<button id="ag_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								蔡明修
+							</p>
+								<button id="ah_O">O</button>
+								<button id="ah_X">X</button>
+							<p class="name" style="font-size:30px; color: white; position: relative;left: 50px;">
+								林鴻諭
+							</p>
+								<button id="ai_O">O</button>
+								<button id="ai_X">X</button>
+						</div>
+
+						<button id="summit">Summit</button>
+					<!--/main-->
+					<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+					<script>
+						var names = {'王郁琪': '0', '邱百纓': '0',
+                    				 '簡丞珮': '0', '張語恩': '0',
+                    				 '何奕萱': '0', '倪國勛': '0',
+                    				 '吳偵平': '0', '林亭伃': '0',
+                    				 '梁致綜': '0', '賴柏瑜': '0',
+                    				 '林辰臻': '0', '黃威翔': '0',
+                    				 '蔡柏垣': '0', '潘荏羽': '0',
+                    			     '曾韻如': '0', '柳孟芸': '0',
+                    				 '陳軒翊': '0', '張祐禎': '0',
+                    				 '王聖中': '0', '林家緯': '0',
+                    				 '王宏偉': '0', '洪培軒': '0',
+                    				 '宋金操': '0', '郭彥松': '0',
+                    				 '黃俊豪': '0', '林郁松': '0',
+                    				 '張財實': '0', '陳彥達': '0',
+                    				 '林禹辰': '0', '黃瑞連': '0',
+                    				 '吳郁晨': '0', '陳香君': '0',
+                    				 '陳昱霖': '0', '蔡明修': '0',
+                    				 '林鴻諭': '0'};
+						var constraints = { video: { facingMode: "user" }, audio: false };
+						// Define constants
+						const cameraView = document.querySelector("#camera--view"),
+							cameraOutput = document.querySelector("#camera--output"),
+							cameraSensor = document.querySelector("#camera--sensor"),
+							cameraTrigger = document.querySelector("#camera--trigger")
+						// Access the device camera and stream to cameraView
+						function cameraStart() {
+							navigator.mediaDevices
+								.getUserMedia(constraints)
+								.then(function(stream) {
+								track = stream.getTracks()[0];
+								cameraView.srcObject = stream;
+							})
+							.catch(function(error) {
+								console.error("Oops. Something is broken.", error);
+							});
+						}
+						// Take a picture when cameraTrigger is tapped
+						cameraTrigger.onclick = function() {
+							$("#result").text("");
+							cameraSensor.width = cameraView.videoWidth;
+							cameraSensor.height = cameraView.videoHeight;
+							cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
+							cameraOutput.src = cameraSensor.toDataURL("image/webp");
+							cameraOutput.classList.add("taken");
+							var picture = cameraSensor.toDataURL('image/webp');
+								picture = picture.replace("data:image/webp;base64,","");
+								
+								let message={
+									image:picture
+								}
+								console.log(message);
+								$.post("http://localhost:5000/index",JSON.stringify(message),function(response){
+									console.log(response);
+									$("#result").text(response);
+									names[response] = '1';
+									console.log(names);
+									if(response == "王郁琪")
+									{
+										document.getElementById("a_X").style.background="#C0C0C0";
+										document.getElementById("a_O").style.background="#8FBC8F";
+									}
+									else if(response == "邱百纓")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("b_X").style.background="#C0C0C0";
+										document.getElementById("b_O").style.background="#8FBC8F";
+									}
+									else if(response == "簡丞珮")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("c_X").style.background="#C0C0C0";
+										document.getElementById("c_O").style.background="#8FBC8F";
+									}
+									else if(response == "張語恩")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("d_X").style.background="#C0C0C0";
+										document.getElementById("d_O").style.background="#8FBC8F";
+									}
+									else if(response == "何奕萱")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("e_X").style.background="#C0C0C0";
+										document.getElementById("e_O").style.background="#8FBC8F";
+									}
+									else if(response == "倪國勛")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("f_X").style.background="#C0C0C0";
+										document.getElementById("f_O").style.background="#8FBC8F";
+									}
+									else if(response == "吳偵平")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("g_X").style.background="#C0C0C0";
+										document.getElementById("g_O").style.background="#8FBC8F";
+									}
+									else if(response == "林亭伃")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("h_X").style.background="#C0C0C0";
+										document.getElementById("h_O").style.background="#8FBC8F";
+									}
+									else if(response == "梁致綜")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("i_X").style.background="#C0C0C0";
+										document.getElementById("i_O").style.background="#8FBC8F";
+									}
+									else if(response == "賴柏瑜")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("j_X").style.background="#C0C0C0";
+										document.getElementById("j_O").style.background="#8FBC8F";
+									}
+									else if(response == "林辰臻")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("k_X").style.background="#C0C0C0";
+										document.getElementById("k_O").style.background="#8FBC8F";
+									}
+									else if(response == "黃威翔")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("l_X").style.background="#C0C0C0";
+										document.getElementById("l_O").style.background="#8FBC8F";
+									}
+									else if(response == "蔡柏垣")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("m_X").style.background="#C0C0C0";
+										document.getElementById("m_O").style.background="#8FBC8F";
+									}
+									else if(response == "潘荏羽")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("n_X").style.background="#C0C0C0";
+										document.getElementById("n_O").style.background="#8FBC8F";
+									}
+									else if(response == "曾韻如")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("o_X").style.background="#C0C0C0";
+										document.getElementById("o_O").style.background="#8FBC8F";
+									}
+									else if(response == "柳孟芸")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("p_X").style.background="#C0C0C0";
+										document.getElementById("p_O").style.background="#8FBC8F";
+									}
+									else if(response == "陳軒翊")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("q_X").style.background="#C0C0C0";
+										document.getElementById("q_O").style.background="#8FBC8F";
+									}
+									else if(response == "張祐禎")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("r_X").style.background="#C0C0C0";
+										document.getElementById("r_O").style.background="#8FBC8F";
+									}
+									else if(response == "王聖中")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("s_X").style.background="#C0C0C0";
+										document.getElementById("s_O").style.background="#8FBC8F";
+									}
+									else if(response == "林家緯")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("t_X").style.background="#C0C0C0";
+										document.getElementById("t_O").style.background="#8FBC8F";
+									}
+									else if(response == "王宏偉")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("u_X").style.background="#C0C0C0";
+										document.getElementById("u_O").style.background="#8FBC8F";
+									}
+									else if(response == "洪培軒")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("v_X").style.background="#C0C0C0";
+										document.getElementById("v_O").style.background="#8FBC8F";
+									}
+									else if(response == "宋金操")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("w_X").style.background="#C0C0C0";
+										document.getElementById("w_O").style.background="#8FBC8F";
+									}
+									else if(response == "郭彥松")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("x_X").style.background="#C0C0C0";
+										document.getElementById("x_O").style.background="#8FBC8F";
+									}
+									else if(response == "黃俊豪")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("y_X").style.background="#C0C0C0";
+										document.getElementById("y_O").style.background="#8FBC8F";
+									}
+									else if(response == "林郁松")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("z_X").style.background="#C0C0C0";
+										document.getElementById("z_O").style.background="#8FBC8F";
+									}
+									else if(response == "張財實")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("aa_X").style.background="#C0C0C0";
+										document.getElementById("aa_O").style.background="#8FBC8F";
+									}
+									else if(response == "陳彥達")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("ab_X").style.background="#C0C0C0";
+										document.getElementById("ab_O").style.background="#8FBC8F";
+									}
+									else if(response == "林禹辰")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("ac_X").style.background="#C0C0C0";
+										document.getElementById("ac_O").style.background="#8FBC8F";
+									}
+									else if(response == "黃瑞連")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("ad_X").style.background="#C0C0C0";
+										document.getElementById("ad_O").style.background="#8FBC8F";
+									}
+									else if(response == "吳郁晨")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("ae_X").style.background="#C0C0C0";
+										document.getElementById("ae_O").style.background="#8FBC8F";
+									}
+									else if(response == "陳香君")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("af_X").style.background="#C0C0C0";
+										document.getElementById("af_O").style.background="#8FBC8F";
+									}
+									else if(response == "陳昱霖")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("ag_X").style.background="#C0C0C0";
+										document.getElementById("ag_O").style.background="#8FBC8F";
+									}
+									else if(response == "蔡明修")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("ah_X").style.background="#C0C0C0";
+										document.getElementById("ah_O").style.background="#8FBC8F";
+									}
+									else if(response == "林鴻諭")
+									{
+										//$("#angel_X").style.backgroundColor = 'rgb(189, 189, 189)';
+										document.getElementById("ai_X").style.background="#C0C0C0";
+										document.getElementById("ai_O").style.background="#8FBC8F";
+									}
+									
+								});
+						};
+						// Start the video stream when the window loads
+						window.addEventListener("load", cameraStart, false);
+						
+						//trigger the button
+						document.getElementById("a_O").onclick = function(){
+							names['王郁琪'] = '1';
+							document.getElementById("a_X").style.background="#C0C0C0";
+							document.getElementById("a_O").style.background="#8FBC8F";
+						};
+						document.getElementById("a_X").onclick = function(){
+							names['王郁琪'] = '0';
+							document.getElementById("a_X").style.background="#CD5C5C";
+							document.getElementById("a_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("b_O").onclick = function(){
+							names['邱百纓'] = '1';
+							document.getElementById("b_X").style.background="#C0C0C0";
+							document.getElementById("b_O").style.background="#8FBC8F";
+						};
+						document.getElementById("b_X").onclick = function(){
+							names['邱百纓'] = '0';
+							document.getElementById("b_X").style.background="#CD5C5C";
+							document.getElementById("b_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("c_O").onclick = function(){
+							names['簡丞珮'] = '1';
+							document.getElementById("c_X").style.background="#C0C0C0";
+							document.getElementById("c_O").style.background="#8FBC8F";
+						};
+						document.getElementById("c_X").onclick = function(){
+							names['簡丞珮'] = '0';
+							document.getElementById("c_X").style.background="#CD5C5C";
+							document.getElementById("c_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("d_O").onclick = function(){
+							names['張語恩'] = '1';
+							document.getElementById("d_X").style.background="#C0C0C0";
+							document.getElementById("d_O").style.background="#8FBC8F";
+						};
+						document.getElementById("d_X").onclick = function(){
+							names['張語恩'] = '0';
+							document.getElementById("d_X").style.background="#CD5C5C";
+							document.getElementById("d_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("e_O").onclick = function(){
+							names['何奕萱'] = '1';
+							document.getElementById("e_X").style.background="#C0C0C0";
+							document.getElementById("e_O").style.background="#8FBC8F";
+						};
+						document.getElementById("e_X").onclick = function(){
+							names['何奕萱'] = '0';
+							document.getElementById("e_X").style.background="#CD5C5C";
+							document.getElementById("e_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("f_O").onclick = function(){
+							names['倪國勛'] = '1';
+							document.getElementById("f_X").style.background="#C0C0C0";
+							document.getElementById("f_O").style.background="#8FBC8F";
+						};
+						document.getElementById("f_X").onclick = function(){
+							names['倪國勛'] = '0';
+							document.getElementById("f_X").style.background="#CD5C5C";
+							document.getElementById("f_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("g_O").onclick = function(){
+							names['吳偵平'] = '1';
+							document.getElementById("g_X").style.background="#C0C0C0";
+							document.getElementById("g_O").style.background="#8FBC8F";
+						};
+						document.getElementById("g_X").onclick = function(){
+							names['吳偵平'] = '0';
+							document.getElementById("g_X").style.background="#CD5C5C";
+							document.getElementById("g_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("h_O").onclick = function(){
+							names['林亭伃'] = '1';
+							document.getElementById("h_X").style.background="#C0C0C0";
+							document.getElementById("h_O").style.background="#8FBC8F";
+						};
+						document.getElementById("h_X").onclick = function(){
+							names['林亭伃'] = '0';
+							document.getElementById("h_X").style.background="#CD5C5C";
+							document.getElementById("h_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("i_O").onclick = function(){
+							names['梁致綜'] = '1';
+							document.getElementById("i_X").style.background="#C0C0C0";
+							document.getElementById("i_O").style.background="#8FBC8F";
+						};
+						document.getElementById("i_X").onclick = function(){
+							names['梁致綜'] = '0';
+							document.getElementById("i_X").style.background="#CD5C5C";
+							document.getElementById("i_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("j_O").onclick = function(){
+							names['賴柏瑜'] = '1';
+							document.getElementById("j_X").style.background="#C0C0C0";
+							document.getElementById("j_O").style.background="#8FBC8F";
+						};
+						document.getElementById("j_X").onclick = function(){
+							names['賴柏瑜'] = '0';
+							document.getElementById("j_X").style.background="#CD5C5C";
+							document.getElementById("j_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("k_O").onclick = function(){
+							names['林辰臻'] = '1';
+							document.getElementById("k_X").style.background="#C0C0C0";
+							document.getElementById("k_O").style.background="#8FBC8F";
+						};
+						document.getElementById("k_X").onclick = function(){
+							names['林辰臻'] = '0';
+							document.getElementById("k_X").style.background="#CD5C5C";
+							document.getElementById("k_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("l_O").onclick = function(){
+							names['黃威翔'] = '1';
+							document.getElementById("l_X").style.background="#C0C0C0";
+							document.getElementById("l_O").style.background="#8FBC8F";
+						};
+						document.getElementById("l_X").onclick = function(){
+							names['黃威翔'] = '0';
+							document.getElementById("l_X").style.background="#CD5C5C";
+							document.getElementById("l_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("m_O").onclick = function(){
+							names['蔡柏垣'] = '1';
+							document.getElementById("m_X").style.background="#C0C0C0";
+							document.getElementById("m_O").style.background="#8FBC8F";
+						};
+						document.getElementById("m_X").onclick = function(){
+							names['蔡柏垣'] = '0';
+							document.getElementById("m_X").style.background="#CD5C5C";
+							document.getElementById("m_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("n_O").onclick = function(){
+							names['潘荏羽'] = '1';
+							document.getElementById("n_X").style.background="#C0C0C0";
+							document.getElementById("n_O").style.background="#8FBC8F";
+						};
+						document.getElementById("n_X").onclick = function(){
+							names['潘荏羽'] = '0';
+							document.getElementById("n_X").style.background="#CD5C5C";
+							document.getElementById("n_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("o_O").onclick = function(){
+							names['曾韻如'] = '1';
+							document.getElementById("o_X").style.background="#C0C0C0";
+							document.getElementById("o_O").style.background="#8FBC8F";
+						};
+						document.getElementById("o_X").onclick = function(){
+							names['曾韻如'] = '0';
+							document.getElementById("o_X").style.background="#CD5C5C";
+							document.getElementById("o_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("p_O").onclick = function(){
+							names['柳孟芸'] = '1';
+							document.getElementById("p_X").style.background="#C0C0C0";
+							document.getElementById("p_O").style.background="#8FBC8F";
+						};
+						document.getElementById("p_X").onclick = function(){
+							names['柳孟芸'] = '0';
+							document.getElementById("p_X").style.background="#CD5C5C";
+							document.getElementById("p_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("q_O").onclick = function(){
+							names['陳軒翊'] = '1';
+							document.getElementById("q_X").style.background="#C0C0C0";
+							document.getElementById("q_O").style.background="#8FBC8F";
+						};
+						document.getElementById("q_X").onclick = function(){
+							names['陳軒翊'] = '0';
+							document.getElementById("q_X").style.background="#CD5C5C";
+							document.getElementById("q_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("r_O").onclick = function(){
+							names['張祐禎'] = '1';
+							document.getElementById("r_X").style.background="#C0C0C0";
+							document.getElementById("r_O").style.background="#8FBC8F";
+						};
+						document.getElementById("r_X").onclick = function(){
+							names['張祐禎'] = '0';
+							document.getElementById("r_X").style.background="#CD5C5C";
+							document.getElementById("r_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("s_O").onclick = function(){
+							names['王聖中'] = '1';
+							document.getElementById("s_X").style.background="#C0C0C0";
+							document.getElementById("s_O").style.background="#8FBC8F";
+						};
+						document.getElementById("s_X").onclick = function(){
+							names['王聖中'] = '0';
+							document.getElementById("s_X").style.background="#CD5C5C";
+							document.getElementById("s_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("t_O").onclick = function(){
+							names['林家緯'] = '1';
+							document.getElementById("t_X").style.background="#C0C0C0";
+							document.getElementById("t_O").style.background="#8FBC8F";
+						};
+						document.getElementById("t_X").onclick = function(){
+							names['林家緯'] = '0';
+							document.getElementById("t_X").style.background="#CD5C5C";
+							document.getElementById("t_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("u_O").onclick = function(){
+							names['王宏偉'] = '1';
+							document.getElementById("u_X").style.background="#C0C0C0";
+							document.getElementById("u_O").style.background="#8FBC8F";
+						};
+						document.getElementById("u_X").onclick = function(){
+							names['王宏偉'] = '0';
+							document.getElementById("u_X").style.background="#CD5C5C";
+							document.getElementById("u_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("v_O").onclick = function(){
+							names['洪培軒'] = '1';
+							document.getElementById("v_X").style.background="#C0C0C0";
+							document.getElementById("v_O").style.background="#8FBC8F";
+						};
+						document.getElementById("v_X").onclick = function(){
+							names['洪培軒'] = '0';
+							document.getElementById("v_X").style.background="#CD5C5C";
+							document.getElementById("v_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("w_O").onclick = function(){
+							names['宋金操'] = '1';
+							document.getElementById("w_X").style.background="#C0C0C0";
+							document.getElementById("w_O").style.background="#8FBC8F";
+						};
+						document.getElementById("w_X").onclick = function(){
+							names['宋金操'] = '0';
+							document.getElementById("w_X").style.background="#CD5C5C";
+							document.getElementById("w_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("x_O").onclick = function(){
+							names['郭彥松'] = '1';
+							document.getElementById("x_X").style.background="#C0C0C0";
+							document.getElementById("x_O").style.background="#8FBC8F";
+						};
+						document.getElementById("x_X").onclick = function(){
+							names['郭彥松'] = '0';
+							document.getElementById("x_X").style.background="#CD5C5C";
+							document.getElementById("x_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("y_O").onclick = function(){
+							names['黃俊豪'] = '1';
+							document.getElementById("y_X").style.background="#C0C0C0";
+							document.getElementById("y_O").style.background="#8FBC8F";
+						};
+						document.getElementById("y_X").onclick = function(){
+							names['黃俊豪'] = '0';
+							document.getElementById("y_X").style.background="#CD5C5C";
+							document.getElementById("y_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("z_O").onclick = function(){
+							names['林郁松'] = '1';
+							document.getElementById("z_X").style.background="#C0C0C0";
+							document.getElementById("z_O").style.background="#8FBC8F";
+						};
+						document.getElementById("z_X").onclick = function(){
+							names['林郁松'] = '0';
+							document.getElementById("z_X").style.background="#CD5C5C";
+							document.getElementById("z_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("aa_O").onclick = function(){
+							names['張財實'] = '1';
+							document.getElementById("aa_X").style.background="#C0C0C0";
+							document.getElementById("aa_O").style.background="#8FBC8F";
+						};
+						document.getElementById("aa_X").onclick = function(){
+							names['張財實'] = '0';
+							document.getElementById("aa_X").style.background="#CD5C5C";
+							document.getElementById("aa_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("ab_O").onclick = function(){
+							names['陳彥達'] = '1';
+							document.getElementById("ab_X").style.background="#C0C0C0";
+							document.getElementById("ab_O").style.background="#8FBC8F";
+						};
+						document.getElementById("ab_X").onclick = function(){
+							names['陳彥達'] = '0';
+							document.getElementById("ab_X").style.background="#CD5C5C";
+							document.getElementById("ab_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("ac_O").onclick = function(){
+							names['林禹辰'] = '1';
+							document.getElementById("ac_X").style.background="#C0C0C0";
+							document.getElementById("ac_O").style.background="#8FBC8F";
+						};
+						document.getElementById("ac_X").onclick = function(){
+							names['林禹辰'] = '0';
+							document.getElementById("ac_X").style.background="#CD5C5C";
+							document.getElementById("ac_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("ad_O").onclick = function(){
+							names['黃瑞連'] = '1';
+							document.getElementById("ad_X").style.background="#C0C0C0";
+							document.getElementById("ad_O").style.background="#8FBC8F";
+						};
+						document.getElementById("ad_X").onclick = function(){
+							names['黃瑞連'] = '0';
+							document.getElementById("ad_X").style.background="#CD5C5C";
+							document.getElementById("ad_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("ae_O").onclick = function(){
+							names['吳郁晨'] = '1';
+							document.getElementById("ae_X").style.background="#C0C0C0";
+							document.getElementById("ae_O").style.background="#8FBC8F";
+						};
+						document.getElementById("ae_X").onclick = function(){
+							names['吳郁晨'] = '0';
+							document.getElementById("ae_X").style.background="#CD5C5C";
+							document.getElementById("ae_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("af_O").onclick = function(){
+							names['陳香君'] = '1';
+							document.getElementById("af_X").style.background="#C0C0C0";
+							document.getElementById("af_O").style.background="#8FBC8F";
+						};
+						document.getElementById("af_X").onclick = function(){
+							names['陳香君'] = '0';
+							document.getElementById("af_X").style.background="#CD5C5C";
+							document.getElementById("af_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("ag_O").onclick = function(){
+							names['陳昱霖'] = '1';
+							document.getElementById("ag_X").style.background="#C0C0C0";
+							document.getElementById("ag_O").style.background="#8FBC8F";
+						};
+						document.getElementById("ag_X").onclick = function(){
+							names['陳昱霖'] = '0';
+							document.getElementById("ag_X").style.background="#CD5C5C";
+							document.getElementById("ag_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("ah_O").onclick = function(){
+							names['蔡明修'] = '1';
+							document.getElementById("ah_X").style.background="#C0C0C0";
+							document.getElementById("ah_O").style.background="#8FBC8F";
+						};
+						document.getElementById("ah_X").onclick = function(){
+							names['蔡明修'] = '0';
+							document.getElementById("ah_X").style.background="#CD5C5C";
+							document.getElementById("ah_O").style.background="#C0C0C0";
+						};
+
+						document.getElementById("ai_O").onclick = function(){
+							names['林鴻諭'] = '1';
+							document.getElementById("ai_X").style.background="#C0C0C0";
+							document.getElementById("ai_O").style.background="#8FBC8F";
+						};
+						document.getElementById("ai_X").onclick = function(){
+							names['林鴻諭'] = '0';
+							document.getElementById("ai_X").style.background="#CD5C5C";
+							document.getElementById("ai_O").style.background="#C0C0C0";
+						};
+
+						
+						document.getElementById("summit").onclick = function(){
+							let message = names;
+							console.log(names);
+
+								document.getElementById("a_O").style.background="#C0C0C0";
+								document.getElementById("b_O").style.background="#C0C0C0";
+								document.getElementById("c_O").style.background="#C0C0C0";
+								document.getElementById("d_O").style.background="#C0C0C0";
+								document.getElementById("e_O").style.background="#C0C0C0";
+								document.getElementById("f_O").style.background="#C0C0C0";
+								document.getElementById("g_O").style.background="#C0C0C0";
+								document.getElementById("h_O").style.background="#C0C0C0";
+								document.getElementById("i_O").style.background="#C0C0C0";
+								document.getElementById("j_O").style.background="#C0C0C0";
+								document.getElementById("k_O").style.background="#C0C0C0";
+								document.getElementById("l_O").style.background="#C0C0C0";
+								document.getElementById("m_O").style.background="#C0C0C0";
+								document.getElementById("n_O").style.background="#C0C0C0";
+								document.getElementById("o_O").style.background="#C0C0C0";
+								document.getElementById("p_O").style.background="#C0C0C0";
+								document.getElementById("q_O").style.background="#C0C0C0";
+								document.getElementById("r_O").style.background="#C0C0C0";
+								document.getElementById("s_O").style.background="#C0C0C0";
+								document.getElementById("t_O").style.background="#C0C0C0";
+								document.getElementById("u_O").style.background="#C0C0C0";
+								document.getElementById("v_O").style.background="#C0C0C0";
+								document.getElementById("w_O").style.background="#C0C0C0";
+								document.getElementById("x_O").style.background="#C0C0C0";
+								document.getElementById("y_O").style.background="#C0C0C0";
+								document.getElementById("z_O").style.background="#C0C0C0";
+								document.getElementById("aa_O").style.background="#C0C0C0";
+								document.getElementById("ab_O").style.background="#C0C0C0";
+								document.getElementById("ac_O").style.background="#C0C0C0";
+								document.getElementById("ad_O").style.background="#C0C0C0";
+								document.getElementById("ae_O").style.background="#C0C0C0";
+								document.getElementById("af_O").style.background="#C0C0C0";
+								document.getElementById("ag_O").style.background="#C0C0C0";
+								document.getElementById("ah_O").style.background="#C0C0C0";
+								document.getElementById("ai_O").style.background="#C0C0C0";
+
+								document.getElementById("a_X").style.background="#CD5C5C";
+								document.getElementById("b_X").style.background="#CD5C5C";
+								document.getElementById("c_X").style.background="#CD5C5C";
+								document.getElementById("d_X").style.background="#CD5C5C";
+								document.getElementById("e_X").style.background="#CD5C5C";
+								document.getElementById("f_X").style.background="#CD5C5C";
+								document.getElementById("g_X").style.background="#CD5C5C";
+								document.getElementById("h_X").style.background="#CD5C5C";
+								document.getElementById("i_X").style.background="#CD5C5C";
+								document.getElementById("j_X").style.background="#CD5C5C";
+								document.getElementById("k_X").style.background="#CD5C5C";
+								document.getElementById("l_X").style.background="#CD5C5C";
+								document.getElementById("m_X").style.background="#CD5C5C";
+								document.getElementById("n_X").style.background="#CD5C5C";
+								document.getElementById("o_X").style.background="#CD5C5C";
+								document.getElementById("p_X").style.background="#CD5C5C";
+								document.getElementById("q_X").style.background="#CD5C5C";
+								document.getElementById("r_X").style.background="#CD5C5C";
+								document.getElementById("s_X").style.background="#CD5C5C";
+								document.getElementById("t_X").style.background="#CD5C5C";
+								document.getElementById("u_X").style.background="#CD5C5C";
+								document.getElementById("v_X").style.background="#CD5C5C";
+								document.getElementById("w_X").style.background="#CD5C5C";
+								document.getElementById("x_X").style.background="#CD5C5C";
+								document.getElementById("y_X").style.background="#CD5C5C";
+								document.getElementById("z_X").style.background="#CD5C5C";
+								document.getElementById("aa_X").style.background="#CD5C5C";
+								document.getElementById("ab_X").style.background="#CD5C5C";
+								document.getElementById("ac_X").style.background="#CD5C5C";
+								document.getElementById("ad_X").style.background="#CD5C5C";
+								document.getElementById("ae_X").style.background="#CD5C5C";
+								document.getElementById("af_X").style.background="#CD5C5C";
+								document.getElementById("ag_X").style.background="#CD5C5C";
+								document.getElementById("ah_X").style.background="#CD5C5C";
+								document.getElementById("ai_X").style.background="#CD5C5C";
+							$.post("http://localhost:5000/index",JSON.stringify(message),function(response){
+								for(key in names)
+								{
+									names[key] = '0';
+								}
+								console.log(names);
+							});
+
+							
+						};
+
+						
+					</script>
+			</article>
+
+		<!-- Two 
+			<article id="two" class="post invert style1 alt">
+				<div class="image">
+					<img src="images/pic13.jpg" alt="" data-position="10% center" />
+				</div>
+				<div class="content">
+					<div class="inner">
+						<header>
+							<h2><a href="generic.html">Donec ex risus mollis</a></h2>
+							<p class="info">3 days ago by <a href="#">Jane Doe</a></p>
+						</header>
+						<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
+						<ul class="actions">
+							<li><a href="generic.html" class="button alt">Read More</a></li>
+						</ul>
+					</div>
+				</div>
+			</article>-->
+
+		
+
+		<!-- Footer 
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				</ul>
+				<div class="copyright">
+					&copy; Untitled. Design: TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+				</div>
+			</footer>-->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+	</body>
+</html>
